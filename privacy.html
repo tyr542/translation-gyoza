@@ -84,7 +84,7 @@ footer { margin-top: 48px; color: var(--muted); font-size: 14px; }
 <h2 id="h7">我們不做的事</h2>
 <ul><li>不收集瀏覽紀錄、網址清單、付款資料、使用統計或廣告識別碼。</li><li>沒有自家伺服器，文字不經過任何中介服務。</li><li>不販售、出租或轉讓使用者資料，也不把資料用在翻譯以外的用途。</li><li>不擷取音訊、不啟動語音辨識，不要求麥克風或分頁音訊權限。</li><li>不常駐在所有網頁；只有你按下翻譯後，程式才進入目前分頁。</li><li>不在無痕視窗執行，無痕頁面的內容不會進入擴充功能的儲存空間。</li></ul>
 <h2 id="h8">Chrome 權限用途</h2>
-<ul><li><code>storage</code>：在本機保存設定、API 金鑰、錯誤紀錄與分頁翻譯狀態。</li><li><code>activeTab</code>、<code>scripting</code>：你按下翻譯或 Alt+T 時，把翻譯程式放進目前分頁。</li><li><code>youtube.com</code>、<code>youtube-nocookie.com</code>：其他網站內嵌的 YouTube 播放器屬於不同網域，需要這兩個網域的權限才能讀到字幕。同樣只在你按下翻譯後才執行，而且只複製播放器已經下載的字幕檔。</li><li>Gemini、OpenAI、Groq、DeepL、Google 翻譯的 API 網域：背景服務只呼叫你選的那一家。</li></ul>
+<ul><li><code>storage</code>：在本機保存設定、API 金鑰、錯誤紀錄與分頁翻譯狀態。</li><li><code>activeTab</code>、<code>scripting</code>：你按下翻譯或 Alt+T 時，Chrome 暫時允許翻譯煎餃進入目前分頁，把翻譯程式放進去。YouTube、Coursera 和一般網頁上的字幕與文字，都是靠這兩個權限讀到的。</li><li><code>youtube.com</code>、<code>youtube-nocookie.com</code>：只補一種情況，就是別的網站（例如部落格或課程頁）裡內嵌的 YouTube 播放器。它屬於另一個網域，上面的暫時權限進不去，需要這兩個網域的權限才能讀到字幕。同樣只在你按下翻譯後才執行，而且只讀字幕：向 YouTube 取字幕檔，或複製播放器已經下載的字幕檔。</li><li>Gemini、OpenAI、Groq、DeepL、Google 翻譯的 API 網域：背景服務只呼叫你選的那一家。</li></ul>
 <h2 id="h9">政策變更</h2>
 <p>這份政策有變動時，會更新上方的「最後更新」日期。送出的資料種類有變動時，會在擴充功能裡另外告知，並重新取得你的同意。</p>
 <h2 id="h10">聯絡</h2>
