@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>翻譯煎餃隱私權政策</title>
+<meta name="description" content="翻譯煎餃 Chrome 擴充功能的隱私權政策：哪些文字會送到哪家翻譯服務商、存在你電腦上的資料與刪除方式。">
+<style>
+:root {
+  color-scheme: light dark;
+  --bg: #f6f6f4;
+  --surface: #ffffff;
+  --line: #dcdcd6;
+  --text: #1a1b1f;
+  --muted: #595d66;
+  --accent: #a8660c;
+  --code-bg: #efefeb;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #101114;
+    --surface: #17191e;
+    --line: #2d3038;
+    --text: #f2f0eb;
+    --muted: #aaaeb8;
+    --accent: #f1b55b;
+    --code-bg: #22252c;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Noto Sans TC", "Microsoft JhengHei", "PingFang TC", system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+}
+main { max-width: 760px; margin: 0 auto; padding: 48px 20px 80px; }
+.eyebrow { color: var(--accent); font-size: 14px; font-weight: 700; letter-spacing: 0.04em; margin: 0 0 8px; }
+h1 { font-size: clamp(28px, 5vw, 38px); line-height: 1.3; margin: 0 0 8px; }
+.updated { color: var(--muted); font-size: 14px; margin: 0 0 32px; }
+h2 { font-size: 21px; margin: 40px 0 12px; padding-top: 16px; border-top: 1px solid var(--line); }
+p, li { max-width: 68ch; }
+ul { padding-left: 1.3em; }
+li { margin: 6px 0; }
+a { color: var(--accent); text-underline-offset: 3px; }
+code { font-family: Consolas, "JetBrains Mono", monospace; font-size: 0.88em; background: var(--code-bg); padding: 1px 5px; border-radius: 4px; overflow-wrap: anywhere; }
+.table-wrap { overflow-x: auto; margin: 12px 0; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: 15px; }
+th, td { text-align: left; vertical-align: top; padding: 10px 14px; border-bottom: 1px solid var(--line); }
+tr:last-child td { border-bottom: 0; }
+th { font-size: 13.5px; color: var(--muted); font-weight: 700; }
+footer { margin-top: 48px; color: var(--muted); font-size: 14px; }
+</style>
+</head>
+<body>
+<main>
+<p class="eyebrow">翻譯煎餃 Chrome 擴充功能</p>
+<h1>隱私權政策</h1>
+<p class="updated">最後更新：2026-09-23 ・ <a href="#english">English summary</a></p>
+<h2 id="h1">一句話版本</h2>
+<p>翻譯煎餃是 Chrome 桌面版擴充功能，使用你自己的 API 金鑰（BYOK）。你按下翻譯後，要翻的文字會從你的瀏覽器直接送到你選的 Gemini、OpenAI、Groq、DeepL 或 Google 翻譯官方 API。翻譯煎餃沒有自己的伺服器，沒有遙測、追蹤或廣告，也不販售任何資料。</p>
+<h2 id="h2">什麼時候會送出資料</h2>
+<p>只在下面這些時候：</p>
+<ul><li>你按「翻譯影片字幕」「翻譯目前網頁」，或按快捷鍵 Alt+T。</li><li>整頁翻譯開著時，你反白文字後按「譯」或「查看原文」。</li><li>你測試連線，或貼上金鑰後由擴充功能自動測試連線。</li><li>你在同一個分頁、同一個網站再次打開擴充功能視窗時，會自動恢復你上次在這個分頁開著的翻譯。換到別的網站或關掉分頁就不會恢復。</li></ul>
+<h2 id="h3">會送到服務商的資料</h2>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">資料</th><th scope="col">什麼時候</th><th scope="col">送給誰</th></tr></thead>
+<tbody><tr><td>影片的文字字幕</td><td>翻譯影片字幕</td><td>你選的服務商</td></tr><tr><td>網頁上畫面附近的段落文字。輸入框、密碼欄、隱藏內容不送；原本就是繁體中文的段落不送</td><td>翻譯目前網頁</td><td>你選的服務商</td></tr><tr><td>反白的文字，以及它前後最多約 1,200 字的段落與最近的標題。前後文只用來判斷語意，不會被翻譯或顯示</td><td>反白後按「譯」</td><td>你選的服務商</td></tr><tr><td>反白的片段、它所在的整句原文與整句譯文</td><td>「只顯示譯文」時反白後按「查看原文」</td><td>只有 Gemini、OpenAI、Groq</td></tr><tr><td>網頁標題、描述與網站名稱，用來判斷內容類型（例如技術文件、新聞）。不送網址</td><td>翻譯字幕或整頁時</td><td>只有 Gemini、OpenAI、Groq</td></tr><tr><td>你填的「翻譯情境」與「專有名詞」</td><td>每次翻譯與測試連線</td><td>只有 Gemini、OpenAI、Groq。DeepL 與 Google 翻譯收不到；DeepL 的專有名詞由擴充功能在你的電腦上以佔位符保護</td></tr><tr><td>固定的英文測試句「Hello, this is a connectivity test.」</td><td>測試連線</td><td>你選的服務商</td></tr><tr><td>API 金鑰</td><td>每次請求，放在 HTTP 標頭</td><td>只送給這把金鑰所屬的服務商</td></tr></tbody>
+</table></div>
+<p>請勿把密碼、身分證號、信用卡號、未公開的商業資料或其他機密填進「翻譯情境」與「專有名詞」。</p>
+<h2 id="h4">存在你電腦上的資料</h2>
+<div class="table-wrap"><table>
+<thead><tr><th scope="col">資料</th><th scope="col">存放位置</th><th scope="col">保存多久</th></tr></thead>
+<tbody><tr><td>設定與 API 金鑰</td><td><code>chrome.storage.local</code>。只有擴充功能自己的視窗與背景服務讀得到，網頁讀不到；不會同步到你的 Google 帳號</td><td>直到你清空或移除擴充功能</td></tr><tr><td>翻譯紀錄（原文與譯文的快取，避免同一句重複付費）</td><td>擴充功能的 IndexedDB</td><td>30 天後自動刪除</td></tr><tr><td>分頁翻譯狀態（分頁編號與網站來源，例如 <code>https://www.youtube.com</code>）</td><td><code>chrome.storage.session</code></td><td>關掉分頁或瀏覽器就清除</td></tr><tr><td>最近一筆錯誤紀錄（錯誤代碼、白話說明與時間，可能含出錯的網址片段；金鑰會先遮蔽）</td><td><code>chrome.storage.local</code></td><td>直到你按「知道了」或下一筆錯誤覆蓋；不會自動上傳</td></tr></tbody>
+</table></div>
+<p>Chrome 的本機儲存沒有加密。能登入你的作業系統帳號、或能讀取 Chrome 使用者資料夾的人，仍可能讀到這些資料。</p>
+<h2 id="h5">怎麼刪除你的資料</h2>
+<ul><li>API 金鑰：在擴充功能視窗清空金鑰欄。</li><li>錯誤紀錄：在擴充功能視窗按「知道了」。</li><li>分頁翻譯狀態：關掉分頁。</li><li>全部資料（含翻譯紀錄）：到 <code>chrome://extensions</code> 移除翻譯煎餃，Chrome 會一併刪除它存的所有資料。</li><li>已經送到服務商的資料：依各服務商的政策處理，請直接向服務商申請。</li></ul>
+<h2 id="h6">第三方服務商</h2>
+<p>五家都使用你自己的 API 金鑰。服務商可能收費、限制額度或保留請求紀錄，請一併查看它們的條款與隱私權政策。翻譯煎餃不代付、不轉售，也不控制第三方 API 額度。使用各服務商的 API 需符合它們的年齡與地區規定。</p>
+<ul><li><a href="https://ai.google.dev/gemini-api/terms" rel="noopener">Google Gemini API</a>：沒開帳單的免費額度屬於 Google 的免費服務。Google 會用你送出的內容和回應改進產品與模型，可能有人工審閱，Google 也要求不要送出敏感、機密或個人資料。想避免這件事，請替 API 專案開啟帳單，或改用其他服務商。</li><li><a href="https://openai.com/policies/privacy-policy" rel="noopener">OpenAI API</a></li><li><a href="https://groq.com/privacy-policy/" rel="noopener">Groq API</a></li><li><a href="https://www.deepl.com/privacy" rel="noopener">DeepL API</a>：免費金鑰（以 <code>:fx</code> 結尾）送往 <code>api-free.deepl.com</code>，付費金鑰送往 <code>api.deepl.com</code>，判斷只在你的瀏覽器完成。免費方案不適用 DeepL Pro「不保存文字」的承諾，送出的文字可能被保存；DeepL 條款也限制用免費方案處理個人資料。</li><li><a href="https://cloud.google.com/translate/data-usage" rel="noopener">Google Cloud Translation API</a>：Google 表示不會用你送出的內容訓練翻譯功能。</li></ul>
+<h2 id="h7">我們不做的事</h2>
+<ul><li>不收集瀏覽紀錄、網址清單、付款資料、使用統計或廣告識別碼。</li><li>沒有自家伺服器，文字不經過任何中介服務。</li><li>不販售、出租或轉讓使用者資料，也不把資料用在翻譯以外的用途。</li><li>不擷取音訊、不啟動語音辨識，不要求麥克風或分頁音訊權限。</li><li>不常駐在所有網頁；只有你按下翻譯後，程式才進入目前分頁。</li><li>不在無痕視窗執行，無痕頁面的內容不會進入擴充功能的儲存空間。</li></ul>
+<h2 id="h8">Chrome 權限用途</h2>
+<ul><li><code>storage</code>：在本機保存設定、API 金鑰、錯誤紀錄與分頁翻譯狀態。</li><li><code>activeTab</code>、<code>scripting</code>：你按下翻譯或 Alt+T 時，把翻譯程式放進目前分頁。</li><li><code>youtube.com</code>、<code>youtube-nocookie.com</code>：其他網站內嵌的 YouTube 播放器屬於不同網域，需要這兩個網域的權限才能讀到字幕。同樣只在你按下翻譯後才執行，而且只複製播放器已經下載的字幕檔。</li><li>Gemini、OpenAI、Groq、DeepL、Google 翻譯的 API 網域：背景服務只呼叫你選的那一家。</li></ul>
+<h2 id="h9">政策變更</h2>
+<p>這份政策有變動時，會更新上方的「最後更新」日期。送出的資料種類有變動時，會在擴充功能裡另外告知，並重新取得你的同意。</p>
+<h2 id="h10">聯絡</h2>
+<p>問題或疑慮請來信 tyr542@gmail.com。</p>
+<h2 id="english">English summary</h2>
+<p lang="en">Translation Gyoza is a bring-your-own-key Chrome extension. When you click a translate button or press Alt+T, the text to be translated (video captions, visible page paragraphs, or the text you select plus nearby context) is sent directly from your browser to the provider you chose (Google Gemini, OpenAI, Groq, DeepL or Google Cloud Translation) using your own API key. For Gemini, OpenAI and Groq, the page title, description, site name and your optional translation context and glossary are also included. We run no server, collect no analytics, and never sell or share data. Your API keys, settings, a 30-day translation cache and the last error record stay in Chrome's local extension storage and are deleted when you remove the extension. Contact: tyr542@gmail.com.</p>
+<footer><a href="./">翻譯煎餃</a></footer>
+</main>
+</body>
+</html>
